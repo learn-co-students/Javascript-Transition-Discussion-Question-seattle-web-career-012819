@@ -1,4 +1,4 @@
-// $('#save_lincoln').click(()=>saveLincoln(parseInt($('#interval').val())))
+// J query approach $('#save_lincoln').click(()=>saveLincoln(parseInt($('#interval').val())))
 //
 // function saveLincoln(interval) {
 //   if(isNaN(interval)) {
@@ -7,6 +7,7 @@
 //   $('#foreground').fadeOut(interval);
 // }
 
+//  Simple approach
 const intervalInput = document.getElementById('interval')
 const saveButton = document.getElementById('save_lincoln')
 const zombieAbe = document.getElementById('foreground')
@@ -17,5 +18,18 @@ saveButton.addEventListener('click', function(){
   zombieAbe.style.opacity = 0;
 });
 
-// See Allans repo for the full maths and javascript approach.
-//
+// Long approach
+
+// saveButton.addEventListener('click', function() {
+//   let milliseconds = parseInt(intervalInput.value);
+//   let startingValue = parseInt(zombieAbe.style.opacity);
+//   let decrementAmount = 1 / 100;
+//   console.log(decrementAmount);
+//   let fadeOut = setInterval(function() {
+//     if (startingValue <= 0) {
+//       clearInterval(fadeOut)
+//     }
+//     zombieAbe.style.opacity = startingValue;
+//     startingValue -= decrementAmount;
+//   }, milliseconds * decrementAmount);
+// });
