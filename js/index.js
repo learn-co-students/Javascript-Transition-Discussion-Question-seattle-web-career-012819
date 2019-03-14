@@ -6,3 +6,5 @@ function saveLincoln(interval) {
   }
   $('#foreground').fadeOut(interval);
 }
+
+ 
